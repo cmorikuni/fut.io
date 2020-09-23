@@ -1,5 +1,5 @@
 div {
-  background-color: silver;
+  background-color: lightblue;
 }
 
 /* Style the links inside the sidenav */
@@ -8,7 +8,7 @@ div {
   left: -80px; /* Position them outside of the screen */
   transition: 0.3s; /* Add transition on hover */
   padding: 15px; /* 15px padding */
-  height: 20px;
+  height: 10px;
   width: 100px; /* Set a specific width */
   text-decoration: none; /* Remove underline */
   font-size: 10px; /* Increase font size */
@@ -22,41 +22,41 @@ div {
 
 "red", "yellow", "blue", "orange", "white", "black", "green", "purple"
 #red {
-  top: 10px;
+  top: 20px;
   background-color: red;
 }
 
 #yellow {
-  top: 70px;
+  top: 40px;
   background-color: yellow;
 }
 
 #blue {
-  top: 130px;
+  top: 60px;
   background-color: blue;
 }
 
 #orange {
-  top: 190px;
+  top: 80px;
   background-color: orange;
 }
 
 #white {
-  top: 250px;
+  top: 100px;
   background-color: white;
 }
 
 #black {
-  top: 310px;
+  top: 120px;
   background-color: black;
 }
 
 #green {
-  top: 370px;
+  top: 140px;
   background-color: green;
 }
 
 #purple {
-  top: 370px;
+  top: 160px;
   background-color: purple;
 }
