@@ -22,11 +22,19 @@
     
   function clickColor(elem) {
     console.log(elem);
+    console.log(elem.id);
+    console.log(elem.style.left);
     // Enabled = 0, Disabled = -80px
     if (elem.style.left == 0) {
       elem.style.left = "-80px";
+      
+      index = activeBkColors.indexOf(elem.id);
+      if (index >= 0) {
+          arr.splice( index, 1 );
+      }
     } else {
       elem.style.left = 0;
+      activeBkColors.push(elem.id);
     }
     return true;
   };
