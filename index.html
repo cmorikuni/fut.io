@@ -25,12 +25,12 @@
     console.log(elem.id);
     console.log(elem.style.left);
     // Enabled = 0, Disabled = -80px
-    if (elem.style.left == 0) {
+    if (elem.style.left == 0 or elem.style.left === undefined) {
       elem.style.left = "-80px";
       
       index = activeBkColors.indexOf(elem.id);
       if (index >= 0) {
-          arr.splice( index, 1 );
+          activeBkColors.splice( index, 1 );
       }
     } else {
       elem.style.left = 0;
