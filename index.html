@@ -18,14 +18,17 @@
     //document.body.innerHTML = 5 + 6;
     //document.body.style.backgroundColor
   };
+    
+  function clickColor(color) {
+      return true;
+  };
 </script>
     
 <div id="mySidenav" class="sidenav">
-    <button>But</button>
-  <a href="#" id="about">About</a>
-  <a href="#" id="blog">Blog</a>
-  <a href="#" id="projects">Projects</a>
-  <a href="#" id="contact">Contact</a>
+  <a href="javascript:void(0);" id="about" onclick="clickColor(this);">About</a>
+  <a href="javascript:void(0);" id="blog" onclick="clickColor(this);">Blog</a>
+  <a href="javascript:void(0);" id="projects" onclick="clickColor(this);">Projects</a>
+  <a href="javascript:void(0);" id="contact" onclick="clickColor(this);">Contact</a>
 </div>
     
 <label for="colors">Choose colors:</label>
