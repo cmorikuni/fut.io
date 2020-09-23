@@ -7,7 +7,8 @@
 <body>
 <script>
   var intervalTime = 1000;
-  var colors = [];
+  var allColors = ["red", "yellow", "blue", "orange", "white", "black", "green", "purple"];
+  var activeBkColors = ["red", "yellow", "blue", "orange"];
   var minNumber = 1;
   var maxNumber = 10;
   
@@ -20,29 +21,34 @@
   };
     
   function clickColor(elem) {
-      console.log(elem);
+    console.log(elem);
+    // Enabled = 0, Disabled = -80px
+    if (elem.style.left == 0) {
+      elem.style.left = -80px;
+    } else {
       elem.style.left = 0;
-      return true;
+    }
+    return true;
   };
 </script>
     
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0);" id="about" onclick="clickColor(this);">About</a>
-  <a href="javascript:void(0);" id="blog" onclick="clickColor(this);">Blog</a>
-  <a href="javascript:void(0);" id="projects" onclick="clickColor(this);">Projects</a>
-  <a href="javascript:void(0);" id="contact" onclick="clickColor(this);">Contact</a>
+  <a href="javascript:void(0);" id="red" onclick="clickColor(this);">Red</a>
+  <a href="javascript:void(0);" id="yellow" onclick="clickColor(this);">Yellow</a>
+  <a href="javascript:void(0);" id="blue" onclick="clickColor(this);">Blue</a>
+  <a href="javascript:void(0);" id="orange" onclick="clickColor(this);">Orange</a>
+  <a href="javascript:void(0);" id="white" onclick="clickColor(this);">White</a>
+  <a href="javascript:void(0);" id="black" onclick="clickColor(this);">Black</a>
+  <a href="javascript:void(0);" id="green" onclick="clickColor(this);">Green</a>
+  <a href="javascript:void(0);" id="purple" onclick="clickColor(this);">Purple</a>
 </div>
     
 <label for="colors">Choose colors:</label>
 
 <select name="colors" id="colors" multiple>
-    <option value="white">White</option>
-    <option value="black">Black</option>
-    <option value="blue" selected>Blue</option>
-    <option value="green">Green</option>
-    <option value="orange" selected>Orange</option>
-    <option value="purple">Purple</option>
-    <option value="red" selected>Red</option>
-    <option value="yellow" selected>Yellow</option>
+  <option value="white">White</option>
+  <option value="black">Black</option>
+  <option value="green">Green</option>
+  <option value="purple">Purple</option>
 </select>
 </body>
