@@ -1,3 +1,7 @@
+div {
+  background-color: silver;
+}
+
 /* Style the links inside the sidenav */
 #mySidenav a {
   position: absolute; /* Position them relative to the browser window */
