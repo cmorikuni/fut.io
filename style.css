@@ -5,7 +5,7 @@
 /* Style the links inside the sidenav */
 #mySidenav a {
   position: absolute; /* Position them relative to the browser window */
-  left: -80px; /* Position them outside of the screen */
+  left: -90px; /* Position them outside of the screen */
   transition: 0.3s; /* Add transition on hover */
   padding: 10px;
   height: 10px;
@@ -24,25 +24,25 @@
 #red {
   top: 20px;
   background-color: red;
-  left: 0px;
+  left: -40px;
 }
 
 #yellow {
   top: 40px;
   background-color: yellow;
-  left: 0px;
+  left: -40px;
 }
 
 #blue {
   top: 60px;
   background-color: blue;
-  left: 0px;
+  left: -40px;
 }
 
 #orange {
   top: 80px;
   background-color: orange;
-  left: 0px;
+  left: -40px;
 }
 
 #white {
