@@ -13,11 +13,11 @@
   var maxNumber = 10;
   
   function randomize() {
-    var rand = Math.random();
+    let rand = Math.random();
     //Math.floor(max)
     // 0.07219339624223675, 0.5046481983223421, 0.6796824031993658
     //document.body.innerHTML = 5 + 6;
-    clr = activeColors[rand * Math.floor(activeColors.length)];
+    let clr = activeColors[rand * Math.floor(activeColors.length)];
     console.log(">> RANDOM: " + crl);
     document.body.style.backgroundColor = clr;
     setInterval(randomize, intervalTime);
@@ -26,7 +26,7 @@
   function clickColor(elem) {
     console.log(elem);
     // Enabled = -40px, Disabled = -90px
-    index = activeColors.indexOf(elem.id);
+    let index = activeColors.indexOf(elem.id);
     if (index >= 0) {
       activeColors.splice( index, 1 );
       elem.style.left = "-90px";
@@ -43,8 +43,8 @@
     console.log(">> RUN");
     // initialize color tags
     for (clrInd in activeColors) {
-      clr = activeColors[clrInd];
-      elem = document.getElementById(clr);
+      let clr = activeColors[clrInd];
+      let elem = document.getElementById(clr);
       elem.style.left = "-40px";
     }
     
