@@ -7,6 +7,10 @@ body, html {
   display: grid;
 }
 
+h1 {
+  color: lightslategray;
+}
+
 /* Style the links inside the sidenav */
 #mySidenav a {
   position: fixed; /* Position them relative to the browser window */
