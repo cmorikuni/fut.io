@@ -5,7 +5,7 @@ body, html {
 
 /* Style the links inside the sidenav */
 #mySidenav a {
-  position: absolute; /* Position them relative to the browser window */
+  position: fixed; /* Position them relative to the browser window */
   left: -90px; /* Position them outside of the screen */
   transition: 0.3s; /* Add transition on hover */
   padding: 10px;
