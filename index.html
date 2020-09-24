@@ -33,7 +33,6 @@ toggle background/shape color
   };
     
   function clickColor(elem) {
-    console.log(elem);
     // Enabled = -40px, Disabled = -90px
     let index = activeColors.indexOf(elem.id);
     if (index >= 0) {
@@ -43,8 +42,7 @@ toggle background/shape color
       activeColors.push(elem.id);
       elem.style.left = "-40px";
     }
-    
-    console.log(activeColors);
+
     return true;
   };    
     
