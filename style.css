@@ -17,10 +17,10 @@ h1 {
   left: -90px; /* Position them outside of the screen */
   transition: 0.3s; /* Add transition on hover */
   padding: 10px;
-  height: 20px;
+  height: 10px;
   width: 100px; /* Set a specific width */
   text-decoration: none; /* Remove underline */
-  font-size: 10px; /* Increase font size */
+  font-size: 5px;
   color: white; /* White text color */
   border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
 }
