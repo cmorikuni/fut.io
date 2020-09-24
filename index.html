@@ -12,7 +12,17 @@
   var minNumber = 1;
   var maxNumber = 10;
   
-  setInterval(randomize(), intervalTime);
+  window.onload = function () {
+    // initialize color tags
+    for (clr in activeColors) {
+      elem = document.getElementById(clr);
+      elem.style.left = "-40px";
+    }
+    
+    // initialize interval timer
+    setInterval(randomize(), intervalTime);
+  }
+  
   function randomize() {
     var rand = Math.random();
     console.log(rand);
@@ -23,8 +33,6 @@
     
   function clickColor(elem) {
     console.log(elem);
-    console.log(elem.id);
-    console.log(elem.style.left);
     // Enabled = -40px, Disabled = -90px
     index = activeColors.indexOf(elem.id);
     if (index >= 0) {
