@@ -25,7 +25,7 @@
     console.log(elem.id);
     console.log(elem.style.left);
     // Enabled = 0, Disabled = -80px
-    if (elem.style.left == 0 || elem.style.left === undefined) {
+    if (elem.style.left == "0px") {
       elem.style.left = "-80px";
       
       index = activeBkColors.indexOf(elem.id);
@@ -33,7 +33,7 @@
           activeBkColors.splice( index, 1 );
       }
     } else {
-      elem.style.left = 0;
+      elem.style.left = "0px";
       activeBkColors.push(elem.id);
     }
     return true;
