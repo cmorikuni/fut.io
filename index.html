@@ -12,7 +12,7 @@
   var minNumber = 1;
   var maxNumber = 10;
   
-  window.onload = function () {
+  document.addEventListener('DOMContentLoaded', function(event) {
     // initialize color tags
     for (clr in activeColors) {
       elem = document.getElementById(clr);
@@ -21,7 +21,7 @@
     
     // initialize interval timer
     setInterval(randomize(), intervalTime);
-  }
+  })
   
   function randomize() {
     var rand = Math.random();
