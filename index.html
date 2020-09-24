@@ -26,7 +26,7 @@ toggle background/shape color
     let rand = Math.random();
       
     // set number
-    document.body.h1 = Math.floor(rand * maxNumber);
+    document.getElementById("numbers").innerHTML = Math.floor(rand * maxNumber);
       
     // set background color
     let clrInd = Math.floor(rand * activeColors.length);
