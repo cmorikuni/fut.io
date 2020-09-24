@@ -1,7 +1,6 @@
-body: {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body, html {
+  height: 100%;
+  display: grid;
 }
 
 #mySidenav {
@@ -69,4 +68,5 @@ body: {
 
 #numbers {
   font-size: 200%;
+  margin: auto;
 }
