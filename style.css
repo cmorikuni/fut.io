@@ -33,12 +33,12 @@ h1 {
 
 /*"red", "yellow", "blue", "orange", "white", "black", "green", "purple"*/
 #red {
-  top: 20px;
+  top: 10px;
   background-color: red;
 }
 
 #yellow {
-  top: 40px;
+  top: 50px;
   background-color: yellow;
 }
 
