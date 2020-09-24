@@ -24,25 +24,25 @@
 #red {
   top: 20px;
   background-color: red;
-  left: -40px;
+  left: -40px !important;
 }
 
 #yellow {
   top: 40px;
   background-color: yellow;
-  left: -40px;
+  left: -40px !important;
 }
 
 #blue {
   top: 60px;
   background-color: blue;
-  left: -40px;
+  left: -40px !important;
 }
 
 #orange {
   top: 80px;
   background-color: orange;
-  left: -40px;
+  left: -40px !important;
 }
 
 #white {
