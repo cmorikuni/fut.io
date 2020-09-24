@@ -23,7 +23,7 @@ h1 {
   font-size: 5px;
   color: white; /* White text color */
   border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
-  border-style: 2px solid;
+  border-style: solid;
   border-color: lightslategray;
 }
 
