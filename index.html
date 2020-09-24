@@ -17,7 +17,8 @@
     // initialize color tags
     for (clrInd in activeColors) {
       console.log(">> search for clr: " + activeColors[clrInd]);
-      elem = document.getElementById(activeColors[clrInd]);
+      clr = activeColors[clrInd];
+      elem = document.getElementById(clr);
       elem.style.left = "-40px";
     }
     
