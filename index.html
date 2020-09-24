@@ -8,7 +8,7 @@
 <script>
   var intervalTime = 1000;
   var allColors = ["red", "yellow", "blue", "orange", "white", "black", "green", "purple"];
-  var activeBkColors = ["red", "yellow", "blue", "orange"];
+  var activeColors = ["red", "yellow", "blue", "orange"];
   var minNumber = 1;
   var maxNumber = 10;
   
@@ -24,16 +24,17 @@
     console.log(elem);
     console.log(elem.id);
     console.log(elem.style.left);
-    // Enabled = 0, Disabled = -90px
-    index = activeBkColors.indexOf(elem.id);
+    // Enabled = -40px, Disabled = -90px
+    index = activeColors.indexOf(elem.id);
     if (index >= 0) {
-      activeBkColors.splice( index, 1 );
+      activeColors.splice( index, 1 );
       elem.style.left = "-90px";
     } else {
-      activeBkColors.push(elem.id);
+      activeColors.push(elem.id);
       elem.style.left = "-40px";
     }
-
+    
+    console.log(activeColors);
     return true;
   };
 </script>
