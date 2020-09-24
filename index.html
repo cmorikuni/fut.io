@@ -16,7 +16,6 @@
     console.log(">> RUN");
     // initialize color tags
     for (clrInd in activeColors) {
-      console.log(">> search for clr: " + activeColors[clrInd]);
       clr = activeColors[clrInd];
       elem = document.getElementById(clr);
       elem.style.left = "-40px";
@@ -37,7 +36,7 @@
     
   function randomize() {
     var rand = Math.random();
-    console.log(rand);
+    // 0.07219339624223675, 0.5046481983223421, 0.6796824031993658
     //document.body.innerHTML = 5 + 6;
     //document.body.style.backgroundColor
     setInterval(randomize(), intervalTime);
