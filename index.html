@@ -33,8 +33,8 @@ colors for numbers
     firstNum = Math.floor(randA * maxNumber) + 1;
     secondNum = Math.floor(randB * maxNumber) + 1;
     op = operators[Math.floor(randC * operators.length)];
-    //document.getElementById("numbers").innerHTML = Math.floor(randA * maxNumber) + 1;
-    document.getElementById("numbers").innerHTML = Math.max(firstNum, secondNum) + op + Math.min(firstNum, secondNum);
+    document.getElementById("numbers").innerHTML = Math.floor(randA * maxNumber) + 1;
+    //document.getElementById("numbers").innerHTML = Math.max(firstNum, secondNum) + op + Math.min(firstNum, secondNum);
       
     // set background color
     let clrInd = Math.floor(randBack * activeColors.length);
