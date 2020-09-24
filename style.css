@@ -1,5 +1,6 @@
-#mySidenav {
-  background-color: lightblue;
+body, html {
+  height: 100%;
+  display: grid;
 }
 
 /* Style the links inside the sidenav */
@@ -63,4 +64,5 @@
 
 #numbers {
   font-size: 200%;
+  margin: auto;
 }
