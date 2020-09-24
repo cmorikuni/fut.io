@@ -20,25 +20,29 @@
   left: 0;
 } */
 
-"red", "yellow", "blue", "orange", "white", "black", "green", "purple"
+/*"red", "yellow", "blue", "orange", "white", "black", "green", "purple"*/
 #red {
   top: 20px;
   background-color: red;
+  left: 0px;
 }
 
 #yellow {
   top: 40px;
   background-color: yellow;
+  left: 0px;
 }
 
 #blue {
   top: 60px;
   background-color: blue;
+  left: 0px;
 }
 
 #orange {
   top: 80px;
   background-color: orange;
+  left: 0px;
 }
 
 #white {
