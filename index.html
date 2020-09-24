@@ -32,7 +32,7 @@ colors for numbers
     // set number
     firstNumber = Math.floor(randA * maxNumber) + 1;
     secondNumber = Math.floor(randB * maxNumber) + 1;
-    op = operators[Math.floor(randC * operators)];
+    op = operators[Math.floor(randC * operators.length)];
     //document.getElementById("numbers").innerHTML = Math.floor(randA * maxNumber) + 1;
     document.getElementById("numbers").innerHTML = firstNumber + " " + op + " " + secondNumber;
       
