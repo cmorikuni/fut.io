@@ -7,7 +7,7 @@
 <body class="sansserif">
 <!--
 FEATURES:
-numbers (1-99)
+DONE: numbers (1-99)
 colors for numbers
 simple equations ([0-9] +,- [0-9])
 toggle numbers/equations
@@ -23,13 +23,16 @@ toggle background/shape color
   var maxEquationNum = 9;
   
   function randomize() {
-    let rand = Math.random();
+    let randA = Math.random();
+    let randB = Math.random();
+    let randC = Math.random();
+    let randBack = Math.random();
       
     // set number
-    document.getElementById("numbers").innerHTML = Math.floor(rand * maxNumber) + 1;
+    document.getElementById("numbers").innerHTML = Math.floor(randA * maxNumber) + 1;
       
     // set background color
-    let clrInd = Math.floor(rand * activeColors.length);
+    let clrInd = Math.floor(randBack * activeColors.length);
     let clr = activeColors[clrInd];
     document.body.style.backgroundColor = clr;
   };
