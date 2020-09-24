@@ -29,7 +29,6 @@ toggle background/shape color
     //document.body.innerHTML = 5 + 6;
     let clrInd = Math.floor(rand * activeColors.length);
     let clr = activeColors[clrInd];
-    console.log(">> RANDOM: " + clrInd);
     document.body.style.backgroundColor = clr;
     setInterval(randomize, intervalTime);
   };
