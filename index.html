@@ -15,8 +15,8 @@
   function run() {
     console.log(">> RUN");
     // initialize color tags
-    for (clr in activeColors) {
-      console.log(">> search for clr: " + clr);
+    for (clrInd in activeColors) {
+      console.log(">> search for clr: " + activeColors[clrInd]);
       elem = document.getElementById(clr);
       elem.style.left = "-40px";
     }
