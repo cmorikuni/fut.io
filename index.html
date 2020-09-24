@@ -19,6 +19,7 @@ colors for numbers
   var intervalTime = 3000;
   var allColors = ["red", "yellow", "blue", "orange", "white", "black", "green", "purple"];
   var activeColors = ["red", "yellow", "blue", "orange"];
+  var operators = ["+", "-"]
   var maxNumber = 9;
   var maxEquationNum = 9;
   
@@ -29,7 +30,11 @@ colors for numbers
     let randBack = Math.random();
       
     // set number
-    document.getElementById("numbers").innerHTML = Math.floor(randA * maxNumber) + 1;
+    firstNumber = Math.floor(randA * maxNumber) + 1;
+    secondNumber = Math.floor(randB * maxNumber) + 1;
+    op = operators[Math.floor(randC * operators)];
+    //document.getElementById("numbers").innerHTML = Math.floor(randA * maxNumber) + 1;
+    document.getElementById("numbers").innerHTML = firstNumber + " " + op + " " + secondNumber;
       
     // set background color
     let clrInd = Math.floor(randBack * activeColors.length);
