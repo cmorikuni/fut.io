@@ -19,12 +19,14 @@ toggle background/shape color
   var intervalTime = 3000;
   var allColors = ["red", "yellow", "blue", "orange", "white", "black", "green", "purple"];
   var activeColors = ["red", "yellow", "blue", "orange"];
-  var minNumber = 1;
   var maxNumber = 10;
+  var maxEquationNum = 9;
   
   function randomize() {
     let rand = Math.random();
-    //document.body.innerHTML = 5 + 6;
+      
+    // set number
+    document.body.h1 = Math.floor(rand * maxNumber);
       
     // set background color
     let clrInd = Math.floor(rand * activeColors.length);
@@ -80,5 +82,5 @@ toggle background/shape color
     <a href="javascript:void(0);" id="purple" onclick="clickColor(this);">Purple</a>
   </div>
   
-  <h1 id="numbers">77</h1>
+  <h1 id="numbers"></h1>
 </body>
