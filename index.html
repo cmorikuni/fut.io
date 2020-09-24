@@ -23,8 +23,6 @@ toggle background/shape color
   var maxNumber = 10;
   
   function randomize() {
-    clearInterval();
-    
     let rand = Math.random();
     //document.body.innerHTML = 5 + 6;
       
@@ -32,8 +30,6 @@ toggle background/shape color
     let clrInd = Math.floor(rand * activeColors.length);
     let clr = activeColors[clrInd];
     document.body.style.backgroundColor = clr;
-    
-    setInterval(randomize, intervalTime);
   };
     
   function clickColor(elem) {
@@ -62,7 +58,7 @@ toggle background/shape color
     }
     
     // initialize interval timer
-    randomize();
+    setInterval(randomize, intervalTime);
   }
 
   // in case the document is already rendered
