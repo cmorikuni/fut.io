@@ -27,7 +27,7 @@ toggle background/shape color
     //Math.floor(max)
     // 0.07219339624223675, 0.5046481983223421, 0.6796824031993658
     //document.body.innerHTML = 5 + 6;
-    let clrInd = rand * Math.floor(activeColors.length);
+    let clrInd = Math.floor(rand * activeColors.length);
     let clr = activeColors[clrInd];
     console.log(">> RANDOM: " + clrInd);
     document.body.style.backgroundColor = clr;
