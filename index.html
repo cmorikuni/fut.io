@@ -13,8 +13,10 @@
   var maxNumber = 10;
   
   function run() {
+    console.log(">> RUN");
     // initialize color tags
     for (clr in activeColors) {
+      console.log(">> search for clr: " + clr);
       elem = document.getElementById(clr);
       elem.style.left = "-40px";
     }
