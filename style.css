@@ -11,6 +11,11 @@ h1 {
   color: lightslategray;
 }
 
+button {
+  display: block; 
+  margin-top: 10px";
+}
+
 /* Style the links inside the sidenav */
 #mySidenav a {
   position: fixed; /* Position them relative to the browser window */
