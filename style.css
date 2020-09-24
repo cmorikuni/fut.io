@@ -43,32 +43,32 @@ h1 {
 }
 
 #blue {
-  top: 60px;
+  top: 90px;
   background-color: blue;
 }
 
 #orange {
-  top: 80px;
+  top: 130px;
   background-color: orange;
 }
 
 #white {
-  top: 100px;
+  top: 170px;
   background-color: white;
 }
 
 #black {
-  top: 120px;
+  top: 210px;
   background-color: black;
 }
 
 #green {
-  top: 140px;
+  top: 250px;
   background-color: green;
 }
 
 #purple {
-  top: 160px;
+  top: 290px;
   background-color: purple;
 }
 
