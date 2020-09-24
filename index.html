@@ -8,11 +8,11 @@
 <!--
 FEATURES:
 DONE: numbers (1-99)
-simple equations ([0-9] +,- [0-9])
+DONE: simple equations ([0-9] +,- [0-9])
 toggle numbers/equations
 toggle start/stop by touching screen
 implement shapes
-toggle background/shape color
+toggle shape (if shape enabled then shapes use selected colors, background uses all colors)
 colors for numbers
 -->
 <script>
@@ -91,7 +91,7 @@ colors for numbers
     <a href="javascript:void(0);" id="purple" onclick="clickColor(this);"></a>
   </div>
   
-  <button>TEST</button>
+  <button id="numToggle">Numbers</button>
     
   <h1 id="numbers"></h1>
 </body>
