@@ -16,7 +16,7 @@ implement shapes
 toggle background/shape color
 -->
 <script>
-  var intervalTime = 2500;
+  var intervalTime = 2000;
   var allColors = ["red", "yellow", "blue", "orange", "white", "black", "green", "purple"];
   var activeColors = ["red", "yellow", "blue", "orange"];
   var minNumber = 1;
@@ -24,12 +24,13 @@ toggle background/shape color
   
   function randomize() {
     let rand = Math.random();
-    //Math.floor(max)
-    // 0.07219339624223675, 0.5046481983223421, 0.6796824031993658
     //document.body.innerHTML = 5 + 6;
+      
+    // set background color
     let clrInd = Math.floor(rand * activeColors.length);
     let clr = activeColors[clrInd];
     document.body.style.backgroundColor = clr;
+    
     setInterval(randomize, intervalTime);
   };
     
