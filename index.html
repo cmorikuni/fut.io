@@ -23,6 +23,7 @@ colors for numbers
   var maxNumber = 9;
   var maxEquationNum = 9;
   var isNumber = true;
+  var isBackground = true;
   
   function randomize() {
     let randA = Math.random();
@@ -70,6 +71,16 @@ colors for numbers
     }
   };
     
+  function toggleShape(button) {
+    if (isBackground) {
+      isBackground = false;
+      button.innerHTML = "Background";
+    } else {
+      isBackground = true;
+      button.innerHTML = "Shapes";
+    }
+  };  
+  
   function run() {
     console.log(">> RUN");
     // initialize color tags
@@ -108,6 +119,7 @@ colors for numbers
   <h1 id="numbers"></h1>
     
   <div id="buttons">
-    <button id="numToggle" onclick="toggleNumber(this)">Numbers</button>
+    <button id="numToggle" onclick="toggleNumber(this)">Equations</button>
+    <button id="shapeToggle" onclick="toggleShape(this)">Shapes</button>
   </div>
 </body>
