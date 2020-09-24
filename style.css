@@ -60,3 +60,8 @@
   top: 160px;
   background-color: purple;
 }
+
+#numbers {
+  text-align: center;
+  font-size: 200%;
+}
