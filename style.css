@@ -1,3 +1,9 @@
+body: {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #mySidenav {
   background-color: lightblue;
 }
@@ -62,6 +68,5 @@
 }
 
 #numbers {
-  text-align: center;
   font-size: 200%;
 }
