@@ -16,6 +16,7 @@ toggle shape (if shape enabled then shapes use selected colors, background uses 
 colors for numbers
 -->
 <script>
+  var futTimer = undefined;
   var isRunning = true;
   var intervalTime = 2000;
   var allColors = ["red", "yellow", "blue", "orange", "white", "black", "green", "purple"];
@@ -27,13 +28,12 @@ colors for numbers
   var isBackground = true;
   
   function toggleTimer() {
-    if (isRunning) {
-      isRunning = false;
-      clearInterval();
+    if (window.futTimer) {
+      clearInterval(futTimer);
+      futTimer = undefined;
     } else {
-      isRunning = true;
       randomize();
-      setInterval(randomize, intervalTime);
+      futTimer = setInterval(randomize, intervalTime);
     }
   };
   
@@ -105,7 +105,7 @@ colors for numbers
     // initialize interval timer
     isRunning = true;
     randomize();
-    setInterval(randomize, intervalTime);
+    futTimer = setInterval(randomize, intervalTime);
   }
 
   // in case the document is already rendered
