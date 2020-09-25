@@ -4,7 +4,7 @@
     <title>FUT Randomizer</title>
 </head>
 
-<body class="sansserif">
+<body class="sansserif" onclick="toggleTimer()">
 <!--
 FEATURES:
 DONE: numbers (1-99)
@@ -24,6 +24,10 @@ colors for numbers
   var maxEquationNum = 9;
   var isNumber = true;
   var isBackground = true;
+  
+  function toggleTimer() {
+    console.log("TOGGLE TIMER");
+  };
   
   function randomize() {
     let randA = Math.random();
