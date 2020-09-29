@@ -90,10 +90,11 @@ button {
   width: 100%;
   height: auto;
   vertical-align: middle;
-  svg {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+}
+
+svg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
