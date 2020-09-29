@@ -9,6 +9,8 @@ body, html {
 
 h1 {
   color: lightslategray;
+  -webkit-text-stroke-width: 4px; 
+  -webkit-text-stroke-color: #000;
 }
 
 button {
