@@ -78,7 +78,7 @@ button {
 }
 
 #numbers {
-  font-size: 80vw;
+  font-size: 80vmin;
   margin: auto;
 }
 
