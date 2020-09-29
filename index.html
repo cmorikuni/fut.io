@@ -21,9 +21,13 @@ colors for numbers
   var intervalTime = 2000;
   var allColors = ["red", "yellow", "blue", "orange", "white", "black", "green", "purple"];
   var activeColors = ["red", "yellow", "blue", "orange"];
+  
   var operators = ["+", "-"]
   var maxNumber = 9;
   var maxEquationNum = 9;
+  
+  var shapes = ["circle", "oval", "triangle", "square", "rectangle", "diamond", "trapezoid", "pentagon"]
+  
   var isNumber = true;
   var isBackground = true;
   
@@ -134,8 +138,10 @@ colors for numbers
   
   <h1 id="numbers" onclick="toggleTimer(this)"></h1>
 
-  <svg version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-    <circle cx="250" cy="200" r="175" fill="green" stroke="black" stroke-width="1.5"/>
+  <svg version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" id="shapes">
+    <!-- ["circle", "oval", "triangle", "square", "rectangle", "diamond", "trapezoid", "pentagon"] -->
+    <!--<circle cx="250" cy="200" r="175" fill="green" stroke="black" stroke-width="1.5"/>-->
+    <ellipse cx="250" cy="200" rx="175" ry="50" fill="green" stroke="black" stroke-width="1.5" />
   </svg>
       
   <div id="buttons">
