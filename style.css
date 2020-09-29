@@ -82,19 +82,10 @@ button {
   margin: auto;
 }
 
-.svg_container {
-  display: inline-block;
-  position: absolute;
+svg {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
-  vertical-align: middle;
-}
-
-svg {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
