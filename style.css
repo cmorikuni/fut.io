@@ -14,7 +14,7 @@ h1 {
 }
 
 button {
-  display: block; 
+  position: fixed; 
   margin-top: 10px;
 }
 
