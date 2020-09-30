@@ -84,6 +84,7 @@ button {
 #numbers {
   font-size: 75vmin;
   margin: auto;
+  margin-top: 50px;
 }
 
 svg {
