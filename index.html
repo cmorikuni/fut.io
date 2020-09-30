@@ -26,7 +26,7 @@ colors for numbers
   var noSleep = new NoSleep();
 
   var wakeLockEnabled = false;
-  var toggleEl = document.querySelector("#sleepToggle");
+  var toggleEl = document.getElementById("sleepToggle");
   toggleEl.addEventListener('click', function() {
     if (!wakeLockEnabled) {
       noSleep.enable(); // keep the screen on!
