@@ -157,13 +157,7 @@ colors for numbers
   
   function run() {
     console.log(">> RUN");
-    // enable wakeLock
-    if (!wakeLockEnabled) {
-      noSleep.enable(); // keep the screen on!
-      wakeLockEnabled = true;
-      button.innerHTML = "Sleep";
-    }
-    
+
     // initialize color tags
     for (clrInd in activeColors) {
       let clr = activeColors[clrInd];
@@ -175,6 +169,13 @@ colors for numbers
     isRunning = true;
     randomize();
     futTimer = setInterval(randomize, intervalTime);
+    
+    // enable wakeLock
+    if (!wakeLockEnabled) {
+      noSleep.enable(); // keep the screen on!
+      wakeLockEnabled = true;
+      document.getElementById("sleepToggle").innerHTML = "Sleep";
+    }
   }
 
   // in case the document is already rendered
