@@ -52,6 +52,13 @@ colors for numbers
   
   function toggleTimer(elem) {
     if (window.futTimer) {
+       // enable wakeLock
+       if (!wakeLockEnabled) {
+        noSleep.enable(); // keep the screen on!
+        wakeLockEnabled = true;
+        button.innerHTML = "Sleep";
+      }
+      
       clearInterval(futTimer);
       futTimer = undefined;
       document.body.style.backgroundColor = "white";
@@ -166,16 +173,9 @@ colors for numbers
     }
     
     // initialize interval timer
-    isRunning = true;
-    randomize();
-    futTimer = setInterval(randomize, intervalTime);
-    
-    // enable wakeLock
-    if (!wakeLockEnabled) {
-      noSleep.enable(); // keep the screen on!
-      wakeLockEnabled = true;
-      document.getElementById("sleepToggle").innerHTML = "Sleep";
-    }
+    //isRunning = true;
+    //randomize();
+    //futTimer = setInterval(randomize, intervalTime);
   }
 
   // in case the document is already rendered
@@ -199,7 +199,7 @@ colors for numbers
     <a href="javascript:void(0);" id="purple" onclick="clickColor(this);"></a>
   </div>
   
-  <h1 id="numbers" onclick="toggleTimer(this)"></h1>
+  <h1 id="numbers" onclick="toggleTimer(this)">START</h1>
 
   <svg version="1.1" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" id="shapes">
   </svg>
