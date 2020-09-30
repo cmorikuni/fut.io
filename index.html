@@ -75,19 +75,24 @@ colors for numbers
       
     // set background color
     if (isBackground) {
+      // clear shape
+      document.getElementById("shapes").innerHTML = "";
+      
+      // set background color from activeColors
       let bkClrInd = Math.floor(randBackClr * activeColors.length);
       let bkClr = activeColors[bkClrInd];
       document.body.style.backgroundColor = bkClr;
     } else {
+      // set shape
       let shpInd = Math.floor(randShape * Object.keys(shapes).length);
       let shpKey = Object.keys(shapes)[shpInd];
-      console.log("IND: " + shpInd + " KEY: " + shpKey);
       let shapeVal = shapes[shpKey];
       
       let shpClrInd = Math.floor(randShapeClr * activeColors.length);
       let shpClr = activeColors[shpClrInd];
       
       document.getElementById("shapes").innerHTML = shapeVal;
+      document.getElementById("shape").fill = shpClr;
 
       // set background color from allColors
       let bkClrInd = Math.floor(randBackClr * allColors.length);
