@@ -157,6 +157,13 @@ colors for numbers
   
   function run() {
     console.log(">> RUN");
+    // enable wakeLock
+    if (!wakeLockEnabled) {
+      noSleep.enable(); // keep the screen on!
+      wakeLockEnabled = true;
+      button.innerHTML = "Sleep";
+    }
+    
     // initialize color tags
     for (clrInd in activeColors) {
       let clr = activeColors[clrInd];
