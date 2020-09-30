@@ -19,14 +19,21 @@ colors for numbers
 -->
 
 <script src="https://raw.githubusercontent.com/richtr/NoSleep.js/master/dist/NoSleep.min.js">
-  var noSleep = new NoSleep();  
-  // Enable wake lock.
-  // (must be wrapped in a user input event handler e.g. a mouse or touch handler)
-  document.addEventListener('click', function enableNoSleep() {
-    document.removeEventListener('click', enableNoSleep, false);
-    noSleep.enable();
-  }, false);    
-  
+  var noSleep = new NoSleep();
+
+  var wakeLockEnabled = false;
+  var toggleEl = document.querySelector("#sleepToggle");
+  toggleEl.addEventListener('click', function() {
+    if (!wakeLockEnabled) {
+      noSleep.enable(); // keep the screen on!
+      wakeLockEnabled = true;
+      toggleEl.value = "Sleep";
+    } else {
+      noSleep.disable(); // let the screen turn off.
+      wakeLockEnabled = false;
+      toggleEl.value = "No Sleep";
+    }
+  }, false);
   
   var futTimer = undefined;
   var intervalTime = 2000;
@@ -187,6 +194,7 @@ colors for numbers
   </svg>
       
   <div id="buttons">
+    <button id="sleepToggle" onclick="">No Sleep</button>
     <button id="numToggle" onclick="toggleNumber(this)">Equations</button>
     <button id="shapeToggle" onclick="toggleShape(this)">Shapes</button>
   </div>
