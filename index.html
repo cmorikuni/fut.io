@@ -48,7 +48,9 @@ colors for numbers
     let randA = Math.random();
     let randB = Math.random();
     let randC = Math.random();
-    let randBack = Math.random();
+    let randBackClr = Math.random();
+    let randShape = Math.random();
+    let randShapeClr = Math.random();
       
     // set number
     firstNum = Math.floor(randA * maxNumber) + 1;
@@ -61,9 +63,27 @@ colors for numbers
     }
       
     // set background color
-    let clrInd = Math.floor(randBack * activeColors.length);
-    let clr = activeColors[clrInd];
-    document.body.style.backgroundColor = clr;
+    if (isBackground) {
+      let clrInd = Math.floor(randBackClr * activeColors.length);
+      let clr = activeColors[clrInd];
+      document.body.style.backgroundColor = clr;
+    } else {
+      //<!-- ["circle", "oval", "triangle", "square", "rectangle", "rhombus", "diamond", "trapezoid", "pentagon"] -->
+      //<!--circle--><!--<circle cx="50%" cy="50%" r="45" fill="green" stroke="black" stroke-width=".5"></circle>-->
+      //<!--oval--><!--<ellipse cx="50%" cy="50%" rx="50" ry="35" fill="green" stroke="black" stroke-width=".5"></ellipse>-->
+      //<!--triangle--><!--<polygon points="0,-40 40,40 -40,40" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
+      //<!--square--><!--<polygon points="-40,-40 40,-40 40,40 -40,40" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
+      //<!--rectangle--><!--<polygon points="-45,-30 45,-30 45,30 -45,30" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
+      //<!--rhombus--><!--<polygon points="0,-45 45,45 0,45 -45,-45" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
+      //<!--diamond--><!--<polygon points="0,-45 42,0 0,45 -42,0" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
+      //<!--trapezoid--><!--<polygon points="-30,-35 30,-35 50,35 -50,35" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
+      //<!--hexagon--><!--<polygon points="-45,-22 -45,22 0,45 45,22 45,-22 0,-45" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
+    
+      // set background color from allColors
+      let clrInd = Math.floor(randBackClr * allColors.length);
+      let clr = activeColors[clrInd];
+      document.body.style.backgroundColor = clr;
+    }
   };
     
   function clickColor(elem) {
@@ -147,8 +167,8 @@ colors for numbers
     <!--rectangle--><!--<polygon points="-45,-30 45,-30 45,30 -45,30" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
     <!--rhombus--><!--<polygon points="0,-45 45,45 0,45 -45,-45" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
     <!--diamond--><!--<polygon points="0,-45 42,0 0,45 -42,0" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
-    <!--trapezoid-->
-    <!--pentagon-->
+    <!--trapezoid--><!--<polygon points="-30,-35 30,-35 50,35 -50,35" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
+    <!--hexagon--><!--<polygon points="-45,-22 -45,22 0,45 45,22 45,-22 0,-45" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
   </svg>
       
   <div id="buttons">
