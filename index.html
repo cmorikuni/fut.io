@@ -51,14 +51,17 @@ colors for numbers
   var isBackground = true;
   
   function toggleTimer(elem) {
+    if (!wakeLockEnabled) {
+      noSleep.enable(); // keep the screen on!
+      wakeLockEnabled = true;
+      document.getElementById("sleepTimer").innerHTML = "Sleep";
+    } else {
+      noSleep.disable(); // let the screen turn off.
+      wakeLockEnabled = false;
+      document.getElementById("sleepTimer").innerHTML = "No Sleep";
+    }
+    
     if (window.futTimer) {
-       // enable wakeLock
-       if (!wakeLockEnabled) {
-        noSleep.enable(); // keep the screen on!
-        wakeLockEnabled = true;
-        document.getElementById("sleepToggle").innerHTML = "Sleep";
-      }
-      
       clearInterval(futTimer);
       futTimer = undefined;
       document.body.style.backgroundColor = "white";
