@@ -51,6 +51,7 @@ colors for numbers
   var isBackground = true;
   
   function toggleTimer(elem) {
+    // set no sleep
     if (!wakeLockEnabled) {
       noSleep.enable(); // keep the screen on!
       wakeLockEnabled = true;
@@ -61,6 +62,7 @@ colors for numbers
       document.getElementById("sleepToggle").innerHTML = "No Sleep";
     }
     
+    // setup timer
     if (window.futTimer) {
       clearInterval(futTimer);
       futTimer = undefined;
@@ -175,11 +177,6 @@ colors for numbers
       let elem = document.getElementById(clr);
       elem.style.left = "-40px";
     }
-    
-    // initialize interval timer
-    //isRunning = true;
-    //randomize();
-    //futTimer = setInterval(randomize, intervalTime);
   }
 
   // in case the document is already rendered
