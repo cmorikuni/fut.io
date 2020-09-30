@@ -65,7 +65,8 @@ colors for numbers
       clearInterval(futTimer);
       futTimer = undefined;
       document.body.style.backgroundColor = "white";
-      elem.style.color = "white";
+      elem.style.color = "red";
+      elem.value = "S";
     } else {
       randomize();
       futTimer = setInterval(randomize, intervalTime);
