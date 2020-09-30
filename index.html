@@ -79,8 +79,7 @@ colors for numbers
       let bkClr = activeColors[bkClrInd];
       document.body.style.backgroundColor = bkClr;
     } else {
-      console.log("NOT BACKGROUND");
-      let shpInd = Math.floor(randShape * shapes.length);
+      let shpInd = Math.floor(randShape * Object.keys(shapes).length);
       let shpKey = Object.keys(shapes)[shpInd];
       console.log("IND: " + shpInd + " KEY: " + shpKey);
       let shapeVal = shapes[shpKey];
