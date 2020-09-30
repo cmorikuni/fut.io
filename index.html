@@ -14,6 +14,7 @@ DONE: toggle start/stop by touching number
 DONE: implement shapes
 toggle shape (if shape enabled then shapes use selected colors, background uses all colors)
 center numbers better when shapes are visible
+if colors collide, increment the second color by 1 or wrap back to 0
 colors for numbers
 -->
 
@@ -35,7 +36,7 @@ colors for numbers
     "rectangle": '<polygon id="shape" points="-45,-30 45,-30 45,30 -45,30" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>', 
     "rhombus": '<polygon id="shape" points="0,-45 45,45 0,45 -45,-45" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>', 
     "diamond": '<polygon id="shape" points="0,-45 42,0 0,45 -42,0" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>', 
-    "trapezoid": '<polygon id="shape" points="-30,-35 30,-35 50,35 -50,35" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>', 
+    "trapezoid": '<polygon id="shape" points="-30,-35 30,-35 55,35 -55,35" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>', 
     "pentagon": '<polygon id="shape" points="-45,-22 -45,22 0,45 45,22 45,-22 0,-45" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>'
   }
     
@@ -174,16 +175,6 @@ colors for numbers
   <h1 id="numbers" onclick="toggleTimer(this)"></h1>
 
   <svg version="1.1" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" id="shapes">
-    <!-- ["circle", "oval", "triangle", "square", "rectangle", "rhombus", "diamond", "trapezoid", "pentagon"] -->
-    <!--circle--><!--<circle cx="50%" cy="50%" r="45" fill="green" stroke="black" stroke-width=".5"></circle>-->
-    <!--oval--><!--<ellipse cx="50%" cy="50%" rx="50" ry="35" fill="green" stroke="black" stroke-width=".5"></ellipse>-->
-    <!--triangle--><!--<polygon points="0,-40 40,40 -40,40" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
-    <!--square--><!--<polygon points="-40,-40 40,-40 40,40 -40,40" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
-    <!--rectangle--><!--<polygon points="-45,-30 45,-30 45,30 -45,30" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
-    <!--rhombus--><!--<polygon points="0,-45 45,45 0,45 -45,-45" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
-    <!--diamond--><!--<polygon points="0,-45 42,0 0,45 -42,0" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
-    <!--trapezoid--><!--<polygon points="-30,-35 30,-35 50,35 -50,35" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
-    <!--hexagon--><!--<polygon points="-45,-22 -45,22 0,45 45,22 45,-22 0,-45" transform="translate(50,50)" fill="green" stroke="black" stroke-width=".5"></polygon>-->
   </svg>
       
   <div id="buttons">
