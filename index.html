@@ -54,11 +54,11 @@ colors for numbers
     if (!wakeLockEnabled) {
       noSleep.enable(); // keep the screen on!
       wakeLockEnabled = true;
-      document.getElementById("sleepTimer").innerHTML = "Sleep";
+      document.getElementById("sleepToggle").innerHTML = "Sleep";
     } else {
       noSleep.disable(); // let the screen turn off.
       wakeLockEnabled = false;
-      document.getElementById("sleepTimer").innerHTML = "No Sleep";
+      document.getElementById("sleepToggle").innerHTML = "No Sleep";
     }
     
     if (window.futTimer) {
