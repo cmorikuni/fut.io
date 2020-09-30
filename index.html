@@ -24,20 +24,7 @@ colors for numbers
 
 <script>
   var noSleep = new NoSleep();
-
   var wakeLockEnabled = false;
-  var toggleEl = document.getElementById("sleepToggle");
-  toggleEl.addEventListener('click', function() {
-    if (!wakeLockEnabled) {
-      noSleep.enable(); // keep the screen on!
-      wakeLockEnabled = true;
-      toggleEl.value = "Sleep";
-    } else {
-      noSleep.disable(); // let the screen turn off.
-      wakeLockEnabled = false;
-      toggleEl.value = "No Sleep";
-    }
-  }, false);
   
   var futTimer = undefined;
   var intervalTime = 2000;
@@ -156,6 +143,18 @@ colors for numbers
     }
   };  
   
+  function toggleSleep(button) {
+    if (!wakeLockEnabled) {
+      noSleep.enable(); // keep the screen on!
+      wakeLockEnabled = true;
+      button.innerHTML = "Sleep";
+    } else {
+      noSleep.disable(); // let the screen turn off.
+      wakeLockEnabled = false;
+      button.innerHTML = "No Sleep";
+    }
+  };  
+  
   function run() {
     console.log(">> RUN");
     // initialize color tags
@@ -198,7 +197,7 @@ colors for numbers
   </svg>
       
   <div id="buttons">
-    <button id="sleepToggle" onclick="">No Sleep</button>
+    <button id="sleepToggle" onclick="toggleSleep(this)">No Sleep</button>
     <button id="numToggle" onclick="toggleNumber(this)">Equations</button>
     <button id="shapeToggle" onclick="toggleShape(this)">Shapes</button>
   </div>
