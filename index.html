@@ -18,7 +18,16 @@ if colors collide, increment the second color by 1 or wrap back to 0
 colors for numbers
 -->
 
-<script>
+<script src="https://raw.githubusercontent.com/richtr/NoSleep.js/master/dist/NoSleep.min.js">
+  var noSleep = new NoSleep();  
+  // Enable wake lock.
+  // (must be wrapped in a user input event handler e.g. a mouse or touch handler)
+  document.addEventListener('click', function enableNoSleep() {
+    document.removeEventListener('click', enableNoSleep, false);
+    noSleep.enable();
+  }, false);    
+  
+  
   var futTimer = undefined;
   var intervalTime = 2000;
   var allColors = ["red", "yellow", "blue", "orange", "white", "black", "green", "purple"];
