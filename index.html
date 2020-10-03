@@ -188,6 +188,11 @@ blinders (black out for set time, show picture for set time, **need more details
       let elem = document.getElementById(clr);
       elem.style.left = "-40px";
     }
+    
+    // bind inputs
+    document.getElementById("timeInterval").attachEvent('onchange', function(evt) {
+      console.log(evt);
+    });
   }
 
   // in case the document is already rendered
@@ -222,9 +227,9 @@ blinders (black out for set time, show picture for set time, **need more details
   </div>
 
   <div id="inputs">
-    <label for="interval">Time Interval (1-5s)</label>
-    <input type="number" id="interval" name="interval" min="1" max="5">
-    <label for="quantity">Number Max (1-99)</label>
-    <input type="number" id="quantity" name="quantity" min="1" max="99">
+    <label for="timeInterval">Time Interval (1-5s)</label>
+    <input type="number" id="timeInterval" name="timeInterval" min="1" max="5">
+    <label for="max">Number Max (1-99)</label>
+    <input type="number" id="max" name="max" min="1" max="99">
   </div>
 </body>
