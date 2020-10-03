@@ -120,13 +120,13 @@ blinders (black out for set time, show picture for set time, **need more details
 
       // set background color from allColors
       let bkClrInd = Math.floor(randBackClr * allColors.length);
-      let bkClr = activeColors[bkClrInd];
+      let bkClr = allColors[bkClrInd];
       
       console.log(">> S: " + shpClr + " B: " + bkClr);
       if (shpClr == bkClr) {
         console.log(">> SHAPE AND BK THE SAME")
         bkClrInd = (bkClrInd + 1) % allColors.length;
-        bkClr = activeColors[bkClrInd];
+        bkClr = allColors[bkClrInd];
       }
       
       document.body.style.backgroundColor = bkClr;
