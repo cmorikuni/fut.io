@@ -179,6 +179,14 @@ blinders (black out for set time, show picture for set time, **need more details
     }
   };  
   
+  function changeTimeInterval(evt) {
+    console.log(">> TIME: " + evt);
+  };
+  
+  function changeMaxNumber(evt) {
+    console.log(">> NUM: " + evt);
+  };
+  
   function run() {
     console.log(">> RUN");
 
@@ -188,11 +196,6 @@ blinders (black out for set time, show picture for set time, **need more details
       let elem = document.getElementById(clr);
       elem.style.left = "-40px";
     }
-    
-    // bind inputs
-    document.getElementById("timeInterval").attachEvent('onchange', function(evt) {
-      console.log(evt);
-    });
   }
 
   // in case the document is already rendered
@@ -228,8 +231,8 @@ blinders (black out for set time, show picture for set time, **need more details
 
   <div id="inputs">
     <label for="timeInterval">Time Interval (1-5s)</label>
-    <input type="number" id="timeInterval" name="timeInterval" min="1" max="5">
+    <input type="number" id="timeInterval" name="timeInterval" min="1" max="5" onchange="changeTimeInterval(this)">
     <label for="max">Number Max (1-99)</label>
-    <input type="number" id="max" name="max" min="1" max="99">
+    <input type="number" id="max" name="max" min="1" max="99" onchange="changeMaxNumber(this)">
   </div>
 </body>
