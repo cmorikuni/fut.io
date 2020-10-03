@@ -122,9 +122,8 @@ blinders (black out for set time, show picture for set time, **need more details
       let bkClrInd = Math.floor(randBackClr * allColors.length);
       let bkClr = allColors[bkClrInd];
       
-      console.log(">> S: " + shpClr + " B: " + bkClr);
+      // step color if the same
       if (shpClr == bkClr) {
-        console.log(">> SHAPE AND BK THE SAME")
         bkClrInd = (bkClrInd + 1) % allColors.length;
         bkClr = allColors[bkClrInd];
       }
@@ -180,11 +179,16 @@ blinders (black out for set time, show picture for set time, **need more details
   };  
   
   function changeTimeInterval(evt) {
-    console.log(">> TIME: " + evt);
+    intervalTime = evt.value * 1000;
+
+    // reset timer with new interval
+    clearInterval(futTimer);
+    randomize();
+    futTimer = setInterval(randomize, intervalTime);
   };
   
   function changeMaxNumber(evt) {
-    console.log(">> NUM: " + evt);
+    maxNumber = evt.value;
   };
   
   function run() {
@@ -192,7 +196,7 @@ blinders (black out for set time, show picture for set time, **need more details
 
     // initialize inputs
     intervalTime = document.getElementById("timeInterval").value * 1000;
-    maxNumber = document.getElementById("maxNumber").value;
+    intervalTime  = document.getElementById("maxNumber").value;
     
     // initialize color tags
     for (clrInd in activeColors) {
