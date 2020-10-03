@@ -190,6 +190,10 @@ blinders (black out for set time, show picture for set time, **need more details
   function run() {
     console.log(">> RUN");
 
+    // initialize inputs
+    intervalTime = document.getElementById("timeInterval").value
+    maxNumber = document.getElementById("maxNumber").value
+    
     // initialize color tags
     for (clrInd in activeColors) {
       let clr = activeColors[clrInd];
@@ -231,8 +235,8 @@ blinders (black out for set time, show picture for set time, **need more details
 
   <div id="inputs">
     <label for="timeInterval">Time Interval (1-5s)</label>
-    <input type="number" id="timeInterval" name="timeInterval" min="1" max="5" onchange="changeTimeInterval(this)">
+    <input type="number" id="timeInterval" name="timeInterval" min="1" max="5" onchange="changeTimeInterval(this)" value="2">
     <label for="max">Number Max (1-99)</label>
-    <input type="number" id="max" name="max" min="1" max="99" onchange="changeMaxNumber(this)">
+    <input type="number" id="max" name="max" min="1" max="99" onchange="changeMaxNumber(this)" value="20">
   </div>
 </body>
