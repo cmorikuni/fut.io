@@ -20,10 +20,10 @@ h1 {
   left: 0;
 }
 
-button {
-  display: inline-block;
-  margin-top: 10px;
-  margin-bottom: 20px;
+#inputs {
+  display: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 /* Style the links inside the sidenav */
