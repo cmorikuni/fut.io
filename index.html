@@ -137,7 +137,7 @@ blinders (black out for set time, show picture for set time, **need more details
     
   function blink() {
     if (!window.futTimer) { return; }
-    displayType = document.getElementsById("blinker").style.display;
+    displayType = document.getElementById("blinker").style.display;
     if (displayType == "") {
       document.getElementById("blinker").style.display = "none";
     } else {
