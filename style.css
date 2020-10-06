@@ -14,6 +14,12 @@ h1 {
   -webkit-text-stroke-color: #000;
 }
 
+#inputWrapper {
+  position: fixed;
+  bottom: 45;
+  left: 0;
+}
+
 #buttons {
   position: fixed;
   bottom: 0;
