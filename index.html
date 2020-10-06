@@ -136,6 +136,7 @@ blinders (black out for set time, show picture for set time, **need more details
   };
     
   function blink() {
+    if (!window.futTimer) { return; }
     bodyDisplay = document.getElementsByTagName("BODY")[0].style.display;
     if (bodyDisplay == "") {
       document.getElementsByTagName("BODY")[0].style.display = "none";
@@ -195,10 +196,10 @@ blinders (black out for set time, show picture for set time, **need more details
     if (window.blinkTimer) {
       clearInterval(blinkTimer);
       blinkTimer = undefined;
-      button.innerHTML = "No Blink";
+      button.innerHTML = "Blink";
     } else {
       blinkTimer = setInterval(blink, blinkTimer);
-      button.innerHTML = "Blink";
+      button.innerHTML = "No Blink";
     }
   };
   
