@@ -14,8 +14,8 @@ DONE: toggle start/stop by touching number
 DONE: implement shapes
 DONE: no sleep while timer running
 DONE: toggle shape (if shape enabled then shapes use selected colors, background uses all colors)
-fix placement of buttons and inputs
-number input for time and max (tied to number and equation toggle)
+DONE: fix placement of buttons and inputs
+DONE: number input for time and max (tied to number and equation toggle)
 center numbers better when shapes are visible
 DONE: if colors collide, increment the second color by 1 or wrap back to 0
 colors for numbers
@@ -32,8 +32,11 @@ blinders (black out for set time, show picture for set time, **need more details
   
   var futTimer = undefined;
   var intervalTime = 2000;
-  var allColors = ["red", "yellow", "blue", "orange", "white", "black", "green", "purple"];
+  var allColors = ["red", "yellow", "blue", "orange", "white", "brown", "green", "purple"];
   var activeColors = ["red", "yellow", "blue", "orange"];
+  
+  var blinkTimer = undefined;
+  var blinkInterval = 500;
   
   var operators = ["+", "-"]
   var maxNumber = 9;
@@ -75,6 +78,17 @@ blinders (black out for set time, show picture for set time, **need more details
     } else {
       randomize();
       futTimer = setInterval(randomize, intervalTime);
+      elem.style.color = "lightslategray";
+    }
+  };
+  
+  function toggleBlink(elem) {
+    // setup timer
+    if (window.futTimer) {
+      clearInterval(blinkTimer);
+      blinkTimer = undefined;
+    } else {
+      blinkTimer = setInterval(randomize, intervalTime);
       elem.style.color = "lightslategray";
     }
   };
@@ -132,6 +146,15 @@ blinders (black out for set time, show picture for set time, **need more details
     }
   };
     
+  function blink() {
+    bodyDisplay = document.getElementsByTagName("BODY")[0].style.display;
+    if (bodyDisplay == "") {
+      document.getElementsByTagName("BODY")[0].style.display = "none";
+    } else {
+      document.getElementsByTagName("BODY")[0].style.display = "";
+    }
+  };
+  
   function clickColor(elem) {
     // Enabled = -40px, Disabled = -90px
     let index = activeColors.indexOf(elem.id);
@@ -191,6 +214,14 @@ blinders (black out for set time, show picture for set time, **need more details
     maxNumber = evt.value;
   };
   
+  function changeBlinkInterval(evt) {
+    blinkTime = evt.value;
+    
+    // reset timer with new interval
+    clearInterval(blinkTimer);
+    blinkTimer = setBlinkInterval(blink, blinkTime);
+  };
+  
   function run() {
     console.log(">> RUN");
 
@@ -222,7 +253,7 @@ blinders (black out for set time, show picture for set time, **need more details
     <a href="javascript:void(0);" id="blue" onclick="clickColor(this);"></a>
     <a href="javascript:void(0);" id="orange" onclick="clickColor(this);"></a>
     <a href="javascript:void(0);" id="white" onclick="clickColor(this);"></a>
-    <a href="javascript:void(0);" id="black" onclick="clickColor(this);"></a>
+    <a href="javascript:void(0);" id="brown" onclick="clickColor(this);"></a>
     <a href="javascript:void(0);" id="green" onclick="clickColor(this);"></a>
     <a href="javascript:void(0);" id="purple" onclick="clickColor(this);"></a>
   </div>
@@ -235,6 +266,7 @@ blinders (black out for set time, show picture for set time, **need more details
   <div id="buttons">
     <button id="numToggle" onclick="toggleNumber(this)">Equations</button>
     <button id="shapeToggle" onclick="toggleShape(this)">Shapes</button>
+    <button id="blinkToggle" onclick="toggleBlink(this)">Blink</button>
   </div>
 
   <div id="inputs">
@@ -242,5 +274,7 @@ blinders (black out for set time, show picture for set time, **need more details
     <input type="number" id="timeInterval" name="timeInterval" min="1" max="5" onchange="changeTimeInterval(this)" value="2">
     <label for="maxNumber">Number Max (1-99)</label>
     <input type="number" id="maxNumber" name="maxNumber" min="1" max="99" onchange="changeMaxNumber(this)" value="20">
+    <label for="blinkInterval">Blink Interval (1-1000ms)</label>
+    <input type="number" id="blinkInterval" name="blinkInterval" min="1" max="1000" onchange="changeBlinkInterval(this)" value="500">
   </div>
 </body>
