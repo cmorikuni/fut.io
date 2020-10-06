@@ -221,7 +221,7 @@ blinders (black out for set time, show picture for set time, **need more details
     
     // reset timer with new interval
     clearInterval(blinkTimer);
-    blinkTimer = setBlinkInterval(blink, blinkTime);
+    blinkTimer = setInterval(blink, blinkTime);
   };
   
   function run() {
