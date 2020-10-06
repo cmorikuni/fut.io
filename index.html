@@ -82,16 +82,6 @@ blinders (black out for set time, show picture for set time, **need more details
     }
   };
   
-  function toggleBlink(elem) {
-    // setup timer
-    if (window.blinkTimer) {
-      clearInterval(blinkTimer);
-      blinkTimer = undefined;
-    } else {
-      blinkTimer = setInterval(blink, blinkTime);
-    }
-  };
-  
   function randomize() {
     let randA = Math.random();
     let randB = Math.random();
@@ -199,6 +189,18 @@ blinders (black out for set time, show picture for set time, **need more details
       button.innerHTML = "No Sleep";
     }
   };  
+  
+  function toggleBlink(button) {
+    // setup timer
+    if (window.blinkTimer) {
+      clearInterval(blinkTimer);
+      blinkTimer = undefined;
+      button.innerHTML = "No Blink";
+    } else {
+      blinkTimer = setInterval(blink, blinkTime);
+      button.innerHTML = "Blink";
+    }
+  };
   
   function changeTimeInterval(evt) {
     intervalTime = evt.value * 1000;
