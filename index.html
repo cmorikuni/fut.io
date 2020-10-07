@@ -197,10 +197,10 @@ colors for numbers
       clearInterval(blinkTimer);
       blinkTimer = undefined;
       button.innerHTML = "Blink";
+      document.getElementById("blinker").style.display = "none";
     } else {
       blinkTimer = setInterval(blink, blinkInterval);
       button.innerHTML = "No Blink";
-      document.getElementById("blinker").style.display = "none";
     }
   };
   
