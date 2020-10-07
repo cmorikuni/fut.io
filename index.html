@@ -200,6 +200,7 @@ blinders (black out for set time, show picture for set time, **need more details
     } else {
       blinkTimer = setInterval(blink, blinkInterval);
       button.innerHTML = "No Blink";
+      document.getElementById("blinker").style.display = "none";
     }
   };
   
