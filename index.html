@@ -91,12 +91,12 @@ colors for numbers
     let randShapeClr = Math.random();
       
     // set number
-    firstNum = Math.floor(randA * maxNumber) + 1;
-    secondNum = Math.floor(randB * maxNumber) + 1;
     op = operators[Math.floor(randC * operators.length)];
     if (isNumber) {
       document.getElementById("numbers").innerHTML = Math.floor(randA * maxNumber) + 1; 
     } else {
+      firstNum = Math.floor(randA * maxEquationNum) + 1;
+      secondNum = Math.floor(randB * maxEquationNum) + 1;
       document.getElementById("numbers").innerHTML = Math.max(firstNum, secondNum) + op + Math.min(firstNum, secondNum);
     }
       
@@ -208,9 +208,11 @@ colors for numbers
     intervalTime = evt.value * 1000;
 
     // reset timer with new interval
-    clearInterval(futTimer);
-    randomize();
-    futTimer = setInterval(randomize, intervalTime);
+    if (window.futTimer) {
+      clearInterval(futTimer);
+      randomize();
+      futTimer = setInterval(randomize, intervalTime);
+    }
   };
   
   function changeMaxNumber(evt) {
@@ -221,8 +223,10 @@ colors for numbers
     blinkInterval = evt.value;
     
     // reset timer with new interval
-    clearInterval(blinkTimer);
-    blinkTimer = setInterval(blink, blinkInterval);
+    if (window.blinkTimer) {
+      clearInterval(blinkTimer);
+      blinkTimer = setInterval(blink, blinkInterval);
+    }
   };
   
   function run() {
